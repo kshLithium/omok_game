@@ -69,10 +69,13 @@ class _OmokGameState extends State<OmokGame> {
                 itemBuilder: (BuildContext context, int index) {
                   int row = index ~/ 15;
                   int col = index % 15;
+
+                  // Color cellColor = Colors.blue;
+
                   return GestureDetector(
                     onTap: () => dropStone(row, col),
                     child: Container(
-                      //color: Colors.grey[300],
+                      // color: cellColor,
                       decoration: BoxDecoration(
                         border: Border.all(color: Colors.black),
                       ),
@@ -85,7 +88,7 @@ class _OmokGameState extends State<OmokGame> {
                                     radius: 15,
                                   )
                                 : const CircleAvatar(
-                                    backgroundColor: Colors.white,
+                                    backgroundColor: Colors.blue,
                                     radius: 15,
                                   ),
                       ),
